@@ -1,0 +1,19 @@
+{
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {
+            "enableRateLimit": false,
+            "urls": {
+                "api": {
+                    "public": "http://binance-proxy:8090/api/v3"
+                }
+            }
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": false
+        },
+        "pair_whitelist": []
+    }
+}

@@ -44,7 +44,7 @@ jobs:
           END_DATE: ${{ steps.binance-dates.outputs.end_date }}
           EXCHANGE: binance
         run: |
-          docker-compose run --rm download-data
+          docker-compose up
 
       - name: Fix File Ownership
         run: |
@@ -73,7 +73,7 @@ jobs:
           END_DATE: ${{ steps.kucoin-dates.outputs.end_date }}
           EXCHANGE: kucoin
         run: |
-          docker-compose run --rm download-data
+          docker-compose up
 
       - name: Fix File Ownership
         run: |
