@@ -8,7 +8,7 @@ jobs:
 
   Download-Exchange-Data:
     runs-on: ubuntu-latest
-    timeout-minutes: 1800
+    timeout-minutes: 7200
     strategy:
       fail-fast: false
 

@@ -12,16 +12,15 @@ services:
       --timeframe 1m 5m 15m 1h 1d
       --datadir user_data/data/${EXCHANGE:-binance}
       --config user_data/data/pairlists.json
-      --config user_data/data/config-${EXCHANGE:-binance}.json
       --config user_data/data/${EXCHANGE:-binance}-usdt-static.json
   
-  kucoin-proxy:
-    image: mikekonan/exchange-proxy:latest-arm64
-    restart: unless-stopped
-    command: -verbose 1
-    container_name: kucoin-proxy
+  # kucoin-proxy:
+  #   image: mikekonan/exchange-proxy:latest-arm64
+  #   restart: unless-stopped
+  #   command: -verbose 1
+  #   container_name: kucoin-proxy
 
-  binance-proxy:
-    image: nightshift2k/binance-proxy
-    restart: unless-stopped
-    container_name: binance-proxy
+  # binance-proxy:
+  #   image: nightshift2k/binance-proxy
+  #   restart: unless-stopped
+  #   container_name: binance-proxy
