@@ -53,7 +53,7 @@ jobs:
       - name: upload files as artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.exchange }}-results
+          name: ${{ matrix.exchange }}
           path: ${{ matrix.exchange }}
           retention-days: 1
 
@@ -115,9 +115,9 @@ jobs:
       - run: rm -rf binance kucoin
       - name: Download all artifact
         uses: actions/download-artifact@v2
-      # - uses: EndBug/add-and-commit@v8
-      #   with:
-      #     add: 'results'
-      #     push: true
-      #     #pull: '--rebase --autostash'
+      - uses: EndBug/add-and-commit@v8
+        with:
+          add: 'results'
+          push: true
+          #pull: '--rebase --autostash'
       - run: ls -R
