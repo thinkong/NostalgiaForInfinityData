@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1800
     strategy:
-      fail-fast: false 
+      fail-fast: false
       matrix:
         exchange:
           - binance
@@ -42,7 +42,7 @@ jobs:
             backtesting-${{ matrix.exchange }}.env
 
       - name: Download Binance Data (${{ steps.dates.outputs.start_date }} - ${{ steps.dates.outputs.end_date }})
-        id: ${{ matrix.exchange }}-data-download
+        id: exchange-data-download
         env:
           START_DATE: ${{ steps.dates.outputs.start_date }}
           END_DATE: ${{ steps.dates.outputs.end_date }}
