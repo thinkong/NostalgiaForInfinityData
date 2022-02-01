@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1800
     strategy:
-      fail-fast: false matrix:
-      exchange:
-        - binance
-        - kucoin
+      fail-fast: false 
+      matrix:
+        exchange:
+          - binance
+          - kucoin
 
     steps:
       - uses: actions/checkout@v2
